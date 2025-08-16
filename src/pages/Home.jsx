@@ -5,8 +5,9 @@ import {data} from "../data"
 
 export default function Home(){
     const container = ``
-    const section1 = `text-neutral-200 px-5 pb-6 pt-20 bg-cover bg-center mb-6`
-    const date = `text-sm`
+    const section1 = `text-neutral-200 px-5 pb-6 pt-20 bg-cover bg-center mb-6 
+                       md:h-90`
+    const date = `text-sm md:mt-auto`
     const title = `text-2xl font-bold my-3`
     const sectionPosts = `px-5 flex-col gap-10`
     
