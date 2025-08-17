@@ -1,6 +1,6 @@
-export default function Desc(){
+export default function Desc({padding}){
     return(
-        <section>
+        <section className={padding || ""}>
             <h3 className="font-bold text-lg">How I stay committed to learning</h3>
                 <p className="my-4">
                     <span className="block mb-2">I like to think of myself as a lifelong learner. I used to spend hours
