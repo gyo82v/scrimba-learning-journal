@@ -1,9 +1,10 @@
 import {Link} from "react-router-dom"
 import articleImg from "../images/article-img.webp"
 import Post from "../components/Post"
+import Nav from "../components/Nav"
 import {data} from "../data"
 
-export default function Home(){
+export default function Home({open}){
     const section1 = `text-neutral-200 bg-cover bg-center mb-6 p-4
                        h-90 relative`
     const sectionPosts = `px-5 flex-col gap-10 md:grid md:grid-cols-3`
@@ -12,6 +13,7 @@ export default function Home(){
     const postArray = data.map(p => (
         <Post key={p.id} data={p} />
     ))
+    console.log(open)
     return(
         <div>
             <Link to="/article">
@@ -31,6 +33,7 @@ export default function Home(){
             <section className={sectionPosts}>
                {postArray}
             </section>
+            {open && <Nav />}
         </div>
     )
 }

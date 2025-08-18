@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import logo from "../../images/logo.webp"
 
 export default function Header(){

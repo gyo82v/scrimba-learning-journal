@@ -2,8 +2,9 @@ import {data} from "../data"
 import articleImg from "../images/article-img.webp"
 import Post from "../components/Post"
 import Desc from "../components/Desc"
+import Nav from "../components/Nav"
 
-export default function Article(){
+export default function Article({open}){
     const img = `my-8 rounded-sm w-full h-90 md:h-[30rem]`
     const subTitle = `text-center font-bold text-lg mt-14 mb-6`
 
