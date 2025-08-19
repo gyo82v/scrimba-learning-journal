@@ -4,7 +4,7 @@ import Desc from "../components/Desc"
 import avatar from "../images/avatar.png"
 import Nav from "../components/Nav"
 
-export default function AboutMe({open}){
+export default function AboutMe({open, setOpen}){
     const img = `rounded-full w-48 h-48 shadow-lg shadow-neutral-800/30 `
     const subTitle = `text-center font-bold text-lg mt-14 mb-6`
 
@@ -34,7 +34,7 @@ export default function AboutMe({open}){
                      {postArray}
                   </div>
             </section>
-            {open && <Nav />}
+            {open && <Nav setOpen={setOpen} />}
         </div>
     )
 }

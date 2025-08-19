@@ -7,15 +7,15 @@ import AboutMe from "./pages/AboutMe"
 import Article from "./pages/Article"
 
 function App() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   const handleOpen = () => setOpen(o => !o)
 
   const router = createBrowserRouter(createRoutesFromElements(
-    <Route element={<Layout open={open} setOpen={setOpen} />}>
-      <Route path="/" element={<Home open={open} />} />
-      <Route path="article" element={<Article open={open}/>} />
-      <Route path="aboutMe" element={<AboutMe open={open} />} />
+    <Route element={<Layout setOpen={handleOpen} open={open} />}>
+      <Route path="/" element={<Home open={open} setOpen={handleOpen} />} />
+      <Route path="article" element={<Article open={open} setOpen={handleOpen} />} />
+      <Route path="aboutMe" element={<AboutMe open={open} setOpen={handleOpen} />} />
     </Route>
   ))
 

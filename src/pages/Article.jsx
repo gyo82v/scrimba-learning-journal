@@ -4,7 +4,7 @@ import Post from "../components/Post"
 import Desc from "../components/Desc"
 import Nav from "../components/Nav"
 
-export default function Article({open}){
+export default function Article({open, setOpen}){
     const img = `my-8 rounded-sm w-full h-90 md:h-[30rem]`
     const subTitle = `text-center font-bold text-lg mt-14 mb-6`
 
@@ -33,6 +33,7 @@ export default function Article({open}){
                      {postArray}
                   </div>
             </section>
+            {open && <Nav setOpen={setOpen} />}
         </div>
     )
 }
